@@ -1,9 +1,30 @@
 package com.company;
 
 
+import javax.swing.*;
 
 public class Car {
-    public void carSpec() {
+
+    public static void CarDef(){
+       while (true) {
+           String make1= JOptionPane.showInputDialog("Whats the name of the car?");
+           String make2= JOptionPane.showInputDialog("Whats the reg of the car?");
+           String make3= JOptionPane.showInputDialog("Whats the horsepower of the car?");
+           System.out.println("the name of the car is :" + make1);
+           System.out.println("the reg of the car is :" + make2);
+           System.out.println("the horsepower of the car is :" + make3);
+           break;
+        }
+
+
+
+    }
+
+
+
+
+
+    public void carSpec1() {
         String regNr = "YHE 380";
         String märke = "Audi A3 Sportback";
         int årsmodell = 2017;
@@ -17,7 +38,7 @@ public class Car {
 
 
     public void speed(int maxSpeed) {
-        System.out.println("The car is going as fast as it can!");
+
         System.out.println("Max speed is: " + maxSpeed);
     }
 

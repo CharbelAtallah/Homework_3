@@ -5,6 +5,7 @@ import javax.swing.*;
 public class Car1Demo {
     public static void main(String[] args) {
 
+
         //Mfix something that makes the user put in.-Terminal or dialogue 
         Car1 car1 = new Car1(2017, "Audi");
 
@@ -16,6 +17,8 @@ public class Car1Demo {
         System.out.println("No wait... start breaking!");
 
         Car1.brake();
+
+      //  Car1.CarDef();
 
     }
 }

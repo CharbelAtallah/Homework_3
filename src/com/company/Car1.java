@@ -3,20 +3,26 @@ package com.company;
 import javax.swing.*;
 
 public class Car1 {
-    private static int speed; //Varför private?
-    private static int yearModel;
-    private static String make;
-    //int yearModel;
-    //String make;
-    //int speed;
 
-    public static int getYearModel() {
+    private static int yearModel;//Anything inside this class is private. nothing outside this class can access it.
+    private static String make;
+    private static int speed = 0;
+
+    public Car1(int yearModelGiven, String makeGiven) { //No static and no return type for this constructor. Both given because they are gonna give us/initialize the value from above.
+        yearModel = yearModelGiven; //Setting the year model to whatever they typed in for model.
+        make = makeGiven;
+    }
+
+    //Method 1
+    public static int getYearModel() { //Get the information
         return yearModel;
     }
 
+    //Method 2
     public static String getMake() {
         return make;
     }
+
 
 
     public static void accelerate() {
@@ -40,12 +46,4 @@ public class Car1 {
             }
         }
     }
-
-    public Car1(int yearModelGiven, String makeGiven) {
-        yearModel = yearModelGiven;
-        make = makeGiven;
-        speed = 0;
-    }
-
-
 }
