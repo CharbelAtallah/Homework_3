@@ -1,9 +1,12 @@
 package com.company;
 
+
 import javax.swing.*;
+import java.util.Scanner;
 
 public class Car1 {
 
+    //instancevariables
     private static int yearModel;//Anything inside this class is private. nothing outside this class can access it.
     private static String make;
     private static int speed = 0;
@@ -22,6 +25,24 @@ public class Car1 {
     public static String getMake() {
         return make;
     }
+    
+    public void Welcome(){
+        System.out.println("Welcome to the car speed test");
+        JOptionPane.showMessageDialog(null,"Welcome to the car speed test");
+    }
+
+
+    public void speed(String maxSpeed) {
+        // System.out.println("Max speed is: " + maxSpeed);
+        int snabb = Integer.parseInt(maxSpeed);
+
+        if (snabb > 60){
+            System.out.println("The max speed is" + snabb + "it can go faster");
+        }
+        else {
+            System.out.println("The max speed is " + snabb + ". Its to slow");
+        }
+    }
 
 
 
@@ -32,11 +53,10 @@ public class Car1 {
         }
     }
 
-    public void speed(String maxSpeed) {
-        System.out.println("Max speed is: " + maxSpeed + ". Keep going! The car gan go faster"); //IKNTEGRERA
-    }
+
 
     public static void brake() {
+        System.out.println("No wait... start breaking!");
         for (int seconds = 1; seconds <= 3; seconds++) {
             speed -= 20;
             System.out.println("The current speed of the " + getYearModel() + " " + getMake() + " is: " + speed + " KM/H");
