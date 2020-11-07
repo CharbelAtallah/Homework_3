@@ -4,27 +4,30 @@ import javax.swing.*;
 
 public class Car1Demo {
     public static void main(String[] args) {
+//Todo lägg till fler egenskaper för bilen. följ spåret från regnummer.
 
 
+        CreateCar car1 = new CreateCar(2017, "Audi", "ABC123"); //Type in Year XXXX - then brand/model
+       // CreateCar car2 = new CreateCar(1995, "Toyota", );
 
-        Car1 car1 = new Car1(2017, "Audi"); //Type in Year XXXX - then brand/model
-
+        car1.carSpec();
         car1.Welcome();
-
         String mxspd = JOptionPane.showInputDialog("whats the max speed?");
+        car1.Speed(mxspd);
+        car1.Accelerate();
+        car1.Brake();
+
+        /*
+        car2.Welcome();
+        JOptionPane.showInputDialog("Whats the max speed? ");
+        car2.Speed(mxspd);
+        car2.Accelerate();
+        car2.Brake();
+
+         */
 
 
-        car1.speed(mxspd);
-
-        Car1.accelerate();
-
-       // System.out.println("No wait... start breaking!");
-
-
-        Car1.brake();
-
-
-      //  Car1.CarDef();
+        //Fattar inte varför de båda skrivs samma sak.
 
     }
 }
