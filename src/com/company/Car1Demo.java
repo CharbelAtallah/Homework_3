@@ -6,9 +6,17 @@ public class Car1Demo {
     public static void main(String[] args) {
 //Todo lägg till fler egenskaper för bilen. följ spåret från regnummer.
 
+        /**
+         * Type in
+         * 1. year model (2020)
+         * 2. car model (Audi)
+         * 3. registration (ABC123)
+         * 4. Colour (Black)
+         * 5. Horsepower (512)
+         * 6. gear Type (Manuel // Automatic)
+         */
+        CreateCar car1 = new CreateCar(2017, "Audi", "ABC123", "Black", 513, "Automatic"); //Type in Year XXXX - then brand/model
 
-        CreateCar car1 = new CreateCar(2017, "Audi", "ABC123"); //Type in Year XXXX - then brand/model
-       // CreateCar car2 = new CreateCar(1995, "Toyota", );
 
         car1.carSpec();
         car1.Welcome();
@@ -16,18 +24,5 @@ public class Car1Demo {
         car1.Speed(mxspd);
         car1.Accelerate();
         car1.Brake();
-
-        /*
-        car2.Welcome();
-        JOptionPane.showInputDialog("Whats the max speed? ");
-        car2.Speed(mxspd);
-        car2.Accelerate();
-        car2.Brake();
-
-         */
-
-
-        //Fattar inte varför de båda skrivs samma sak.
-
     }
 }
