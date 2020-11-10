@@ -75,13 +75,18 @@ public class CreateCar {
      * slower than 60 = second message appear
      */
     public void Speed(String maxSpeed) {
-        int snabb = Integer.parseInt(maxSpeed);
 
-        if (snabb > 60) {
-            System.out.println("The max speed of the: " + getYearModel() + " " + getCarModel() + " is: " + snabb + ". It can go faster!");
-        } else {
-            System.out.println("The max speed is " + snabb + ". Its to slow");
-        }
+            try {
+                int snabb = Integer.parseInt(maxSpeed);
+
+                if (snabb > 60) {
+                    System.out.println("The max speed of the: " + getYearModel() + " " + getCarModel() + " is: " + snabb + ". It can go faster!");
+                } else {
+                    System.out.println("The max speed is " + snabb + ". Its to slow");
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "You typed in wrong characters. \nUse numbers!");
+            }
     }
 
     /**
