@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class CreateCar {
 
-    //instancevariables
+    //instance variables
     private static int yearModel;//Anything inside this class is private. nothing outside this class can access it.
     private static String carModel;
     private static int speed = 0;
@@ -77,12 +77,12 @@ public class CreateCar {
     public void Speed(String maxSpeed) {
 
             try {
-                int snabb = Integer.parseInt(maxSpeed);
+                int fast = Integer.parseInt(maxSpeed);
 
-                if (snabb > 60) {
-                    System.out.println("The max speed of the: " + getYearModel() + " " + getCarModel() + " is: " + snabb + ". It can go faster!");
+                if (fast > 60) {
+                    System.out.println("The max speed of the: " + getYearModel() + " " + getCarModel() + " is: " + fast + ". It can go faster!");
                 } else {
-                    System.out.println("The max speed is " + snabb + ". Its to slow");
+                    System.out.println("The max speed is " + fast + ". Its to slow");
                 }
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "You typed in wrong characters. \nUse numbers!");
